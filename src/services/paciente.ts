@@ -1,5 +1,5 @@
 import { Paciente } from "../interfaces/paciente.interface";
-import ItemModel from "../model/item";
+import ItemModel from "../model/paciente";
 
 
 const inserPacient = async (item:Paciente)=>{

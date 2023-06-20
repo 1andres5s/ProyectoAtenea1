@@ -1,5 +1,5 @@
 import { Cita } from "../interfaces/cita.interface";
-import ItemModel from "../model/item";
+import ItemModel from "../model/citas";
 
 
 const inserCit = async (item:Cita)=>{

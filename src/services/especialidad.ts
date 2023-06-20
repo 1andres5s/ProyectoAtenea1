@@ -1,26 +1,26 @@
-import { Cita } from "../interfaces/cita.interface";
-import ItemModel from "../model/item";
+import { Especialidad } from "../interfaces/especialidad.interface";
+import ItemModel from "../model/especialidad";
 
 
-const inserCar = async (item:Car)=>{
+const inserEspecial = async (item:Especialidad)=>{
     const responseIsert =await ItemModel.create(item);
     return responseIsert
 };
 
-const getCars = async ()=>{
+const getEspecials = async ()=>{
     const resposeItem = await ItemModel.find({})
     return resposeItem
 }
-const getCar = async (id:string)=>{
+const getEspecial = async (id:string)=>{
     const resposeItem = await ItemModel.findOne({_id:id})
     return resposeItem
 }
-const updateCar = async (id:string,data:Car)=>{
+const updateEspecial = async (id:string,data:Especialidad)=>{
     const resposeItem = await ItemModel.findOneAndUpdate({_id:id},data,{new:true})
     return resposeItem
 }
-const deleteCar = async (id:string)=>{
+const deleteEspecial = async (id:string)=>{
     const resposeItem = await ItemModel.findOneAndDelete({_id:id})
     return resposeItem
 }
-export {inserCar, getCars, getCar, updateCar ,deleteCar};
+export {inserEspecial, getEspecials, getEspecial, updateEspecial ,deleteEspecial};
